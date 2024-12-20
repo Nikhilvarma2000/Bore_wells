@@ -36,7 +36,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 1"
+            alt="Gallery Image 1" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -53,7 +53,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 2"
+            alt="Gallery Image 2" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -70,7 +70,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 3"
+            alt="Gallery Image 3" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -87,7 +87,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 4"
+            alt="Gallery Image 4" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -108,7 +108,7 @@ const Gallery = () => {
           <div className="relative max-w-4xl w-full h-auto">
             <img
               src={currentImage}
-              alt="Lightbox Image"
+              alt="Lightbox Image" // Modify this alt text
               className="w-full h-auto max-h-[90vh] object-contain"
             />
             <button
@@ -122,34 +122,48 @@ const Gallery = () => {
         </div>
       )}
 
-<div className="container mx-auto px-6 py-16">
-  <h2 className="text-4xl font-bold text-center mb-12">Masonry Grid Gallery</h2>
-  
-  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-    <div className="group relative overflow-hidden rounded-lg shadow-lg">
-      <img src="https://via.placeholder.com/600x900" alt="Gallery Item 1" className="w-full h-full object-cover transform transition-all group-hover:scale-110" />
-      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-    </div>
-    
-    <div className="group relative overflow-hidden rounded-lg shadow-lg">
-      <img src="https://via.placeholder.com/600x600" alt="Gallery Item 2" className="w-full h-full object-cover transform transition-all group-hover:scale-110" />
-      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-    </div>
+      {/* Masonry Grid Gallery */}
+      <div className="container mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold text-center mb-12">Masonry Grid Gallery</h2>
 
-    <div className="group relative overflow-hidden rounded-lg shadow-lg">
-      <img src="https://via.placeholder.com/600x800" alt="Gallery Item 3" className="w-full h-full object-cover transform transition-all group-hover:scale-110" />
-      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-    </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/600x900"
+              alt="Masonry Gallery Item 1" // Modify this alt text
+              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
+          </div>
 
-    <div className="group relative overflow-hidden rounded-lg shadow-lg">
-      <img src="https://via.placeholder.com/600x700" alt="Gallery Item 4" className="w-full h-full object-cover transform transition-all group-hover:scale-110" />
-      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-    </div>
-  </div>
-</div>
+          <div className="group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/600x600"
+              alt="Masonry Gallery Item 2" // Modify this alt text
+              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
+          </div>
 
+          <div className="group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/600x800"
+              alt="Masonry Gallery Item 3" // Modify this alt text
+              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
+          </div>
 
-
+          <div className="group relative overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://via.placeholder.com/600x700"
+              alt="Masonry Gallery Item 4" // Modify this alt text
+              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
+          </div>
+        </div>
+      </div>
 
     </div>
   );
