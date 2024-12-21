@@ -36,7 +36,6 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 1" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -53,7 +52,6 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 2" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -70,7 +68,6 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 3" // Modify this alt text
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -79,24 +76,6 @@ const Gallery = () => {
             <p className="text-sm">Description of image 3</p>
           </div>
         </div>
-
-        {/* Gallery Item 4 */}
-        <div
-          className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
-          onClick={() => openLightbox('https://via.placeholder.com/1200x800')}
-        >
-          <img
-            src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 4" // Modify this alt text
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
-          <div className="absolute bottom-4 left-4 z-10 text-white">
-            <h3 className="text-lg font-semibold">Image Title 4</h3>
-            <p className="text-sm">Description of image 4</p>
-          </div>
-        </div>
-
       </div>
 
       {/* Lightbox Overlay */}
@@ -108,7 +87,6 @@ const Gallery = () => {
           <div className="relative max-w-4xl w-full h-auto">
             <img
               src={currentImage}
-              alt="Lightbox Image" // Modify this alt text
               className="w-full h-auto max-h-[90vh] object-contain"
             />
             <button
@@ -121,50 +99,6 @@ const Gallery = () => {
           </div>
         </div>
       )}
-
-      {/* Masonry Grid Gallery */}
-      <div className="container mx-auto px-6 py-16">
-        <h2 className="text-4xl font-bold text-center mb-12">Masonry Grid Gallery</h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-          <div className="group relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="https://via.placeholder.com/600x900"
-              alt="Masonry Gallery Item 1" // Modify this alt text
-              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="https://via.placeholder.com/600x600"
-              alt="Masonry Gallery Item 2" // Modify this alt text
-              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="https://via.placeholder.com/600x800"
-              alt="Masonry Gallery Item 3" // Modify this alt text
-              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-          </div>
-
-          <div className="group relative overflow-hidden rounded-lg shadow-lg">
-            <img
-              src="https://via.placeholder.com/600x700"
-              alt="Masonry Gallery Item 4" // Modify this alt text
-              className="w-full h-full object-cover transform transition-all group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-0 transition-all duration-300"></div>
-          </div>
-        </div>
-      </div>
-
     </div>
   );
 };
