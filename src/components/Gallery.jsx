@@ -37,7 +37,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
-            alt="Gallery Image 1"
+            alt="Gallery "
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
