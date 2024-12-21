@@ -29,6 +29,7 @@ const Gallery = () => {
 
       {/* Gallery Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
         {/* Gallery Item 1 */}
         <div
           className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
@@ -62,6 +63,24 @@ const Gallery = () => {
               <p className="text-sm">Description of image {index + 2}</p>
             </div>
           </div>
+=======
+        {[...Array(4)].map((_, index) => (
+          <div key={index}
+            className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
+            onClick={() => openLightbox('https://via.placeholder.com/1200x800')}
+          >
+            <img
+              src="https://via.placeholder.com/500x500"
+              alt={`Gallery  ${index + 1}`}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 left-4 z-10 text-white">
+              <h3 className="text-lg font-semibold">Image Title {index + 1}</h3>
+              <p className="text-sm">Description of image {index + 1}</p>
+            </div>
+          </div>
+>>>>>>> 8b227fc (Updated Projects and Gallery components with fixes)
         ))}
       </div>
 
@@ -74,7 +93,11 @@ const Gallery = () => {
           <div className="relative max-w-4xl w-full h-auto">
             <img
               src={currentImage}
+<<<<<<< HEAD
               alt="Lightbox Image"
+=======
+              alt="Lightbox View"
+>>>>>>> 8b227fc (Updated Projects and Gallery components with fixes)
               className="w-full h-auto max-h-[90vh] object-contain"
             />
             <button
