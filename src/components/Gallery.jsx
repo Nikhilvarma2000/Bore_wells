@@ -36,6 +36,7 @@ const Gallery = () => {
         >
           <img
             src="https://via.placeholder.com/500x500"
+            alt="Gallery Image 1"
             className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
@@ -45,37 +46,23 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Gallery Item 2 */}
-        <div
-          className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
-          onClick={() => openLightbox('https://via.placeholder.com/1200x800')}
-        >
-          <img
-            src="https://via.placeholder.com/500x500"
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
-          <div className="absolute bottom-4 left-4 z-10 text-white">
-            <h3 className="text-lg font-semibold">Image Title 2</h3>
-            <p className="text-sm">Description of image 2</p>
+        {/* Additional Items */}
+        {[...Array(3)].map((_, index) => (
+          <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
+            onClick={() => openLightbox('https://via.placeholder.com/1200x800')}
+          >
+            <img
+              src="https://via.placeholder.com/500x500"
+              alt={`Gallery Image ${index + 2}`}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute bottom-4 left-4 z-10 text-white">
+              <h3 className="text-lg font-semibold">Image Title {index + 2}</h3>
+              <p className="text-sm">Description of image {index + 2}</p>
+            </div>
           </div>
-        </div>
-
-        {/* Gallery Item 3 */}
-        <div
-          className="group relative overflow-hidden rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl"
-          onClick={() => openLightbox('https://via.placeholder.com/1200x800')}
-        >
-          <img
-            src="https://via.placeholder.com/500x500"
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform transform duration-300"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black opacity-50 group-hover:opacity-0 transition-opacity duration-300"></div>
-          <div className="absolute bottom-4 left-4 z-10 text-white">
-            <h3 className="text-lg font-semibold">Image Title 3</h3>
-            <p className="text-sm">Description of image 3</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* Lightbox Overlay */}
@@ -87,6 +74,7 @@ const Gallery = () => {
           <div className="relative max-w-4xl w-full h-auto">
             <img
               src={currentImage}
+              alt="Lightbox Image"
               className="w-full h-auto max-h-[90vh] object-contain"
             />
             <button
