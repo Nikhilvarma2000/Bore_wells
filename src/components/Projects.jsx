@@ -9,10 +9,6 @@ const Projects = () => {
 
       {/* Grid Layout for Projects with Animation */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
-<<<<<<< HEAD
-
-=======
->>>>>>> 8b227fc (Updated Projects and Gallery components with fixes)
         {[...Array(6)].map((_, index) => (
           <div key={index} className="group relative bg-white p-6 rounded-lg shadow-xl overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
             <img
@@ -36,9 +32,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
-
-=======
 
       {/* About Our Borewell Projects Section */}
       <section className="my-16 py-16 bg-gradient-to-r from-green-200 via-green-100 to-white">
@@ -55,8 +48,7 @@ const Projects = () => {
         <h3 className="text-4xl font-semibold mb-8 text-green-600">Borewell Technologies</h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {/* Technology Cards */}
-          {["Geophysical Surveying", "Advanced Drilling Equipment", "Water Quality Testing", "Pump Installation & Maintenance", "Borewell Casing & Lining", "Solar Pumping Systems"].map((tech, index) => (
+          {['Geophysical Surveying', 'Advanced Drilling Equipment', 'Water Quality Testing', 'Pump Installation & Maintenance', 'Borewell Casing & Lining', 'Solar Pumping Systems'].map((tech, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 duration-300 ease-in-out">
               <h4 className="text-2xl font-semibold mb-4 text-green-500">{tech}</h4>
               <p className="text-gray-700">
@@ -92,7 +84,6 @@ const Projects = () => {
         </div>
       </section>
 
->>>>>>> 8b227fc (Updated Projects and Gallery components with fixes)
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-6 text-center">
         <p className="text-sm">
